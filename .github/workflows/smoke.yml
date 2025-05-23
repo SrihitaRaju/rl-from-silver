@@ -1,0 +1,14 @@
+name: smoke
+on: [push]
+jobs:
+  cartpole:
+    runs-on: ubuntu-latest
+    env:
+      WANDB_MODE: offline
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.9'
+      - run: pip install "gymnasium[all]" wandb rich numpy
+      - run: python random_cartpole.py
