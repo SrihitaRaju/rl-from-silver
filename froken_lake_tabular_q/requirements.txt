@@ -1,0 +1,4 @@
+gymnasium==0.29.1
+numpy==1.24.3
+jupyter==1.0.0
+notebook==7.0.6
